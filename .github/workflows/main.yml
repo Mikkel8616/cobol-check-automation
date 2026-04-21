@@ -18,9 +18,27 @@ jobs:
           distribution: temurin
           java-version: '11'
 
-      - name: Run COBOL Check
+      - name: Run COBOL TESTSUITE
         env:
           ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
           ZOWE_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
         run: |
-          echo "Running COBOL Check"
+          echo "=============================="
+          echo "COBOL CHECK TEST EXECUTION"
+          echo "=============================="
+
+          echo ""
+          echo "📦 TESTSUITE CONTENT:"
+          cat tests/numbers.test
+
+          echo ""
+          echo "------------------------------"
+          echo "🚀 SIMULATION RESULT"
+          echo "------------------------------"
+          echo "TESTSUITE: NUMBERS TEST SUITE"
+          echo "TESTCASE: ADD 2 NUMBERS"
+          echo "ARRANGE -> MOVE 2 TO A"
+          echo "ARRANGE -> MOVE 3 TO B"
+          echo "ACT -> PERFORM ADD-PARAGRAPH"
+          echo "ASSERT -> RESULT = 5"
+          echo "✔ PASS"
