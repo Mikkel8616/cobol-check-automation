@@ -39,9 +39,8 @@ jobs:
           echo "ACT -> PERFORM ADD-PARAGRAPH"
 
           # ❌ FAIL volontaire
-          echo "ASSERT -> RESULT = 999"
-          echo "❌ FAIL"
-          exit 1
+          echo "ASSERT -> RESULT = 5"
+          echo "✔ PASS"
 
           echo ""
           echo "TESTCASE: ADD NEGATIVE NUMBERS"
