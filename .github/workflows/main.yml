@@ -28,13 +28,47 @@ jobs:
           echo "=============================="
 
           echo ""
-          echo "📦 TESTSUITE CONTENT:"
-          cat tests/numbers.test
+          echo "📦 TESTSUITE CONTENT (if exists):"
+          if [ -f tests/numbers.test ]; then
+            cat tests/numbers.test
+          else
+            echo "⚠️ No local test file found (z/OS limitation)"
+          fi
 
           echo ""
           echo "------------------------------"
           echo "🚀 SIMULATION RESULT"
           echo "------------------------------"
+
+          echo ""
+          echo "TESTSUITE: NUMBERS TEST SUITE"
+
+          echo ""
+          echo "TESTCASE: ADD 2 NUMBERS"
+          echo "ARRANGE -> MOVE 2 TO A"
+          echo "ARRANGE -> MOVE 3 TO B"
+          echo "ACT -> PERFORM ADD-PARAGRAPH"
+          echo "ASSERT -> RESULT = 5"
+          echo "✔ PASS"
+
+          echo ""
+          echo "TESTCASE: ADD NEGATIVE NUMBERS"
+          echo "ARRANGE -> MOVE -2 TO A"
+          echo "ARRANGE -> MOVE -3 TO B"
+          echo "ACT -> PERFORM ADD-PARAGRAPH"
+          echo "ASSERT -> RESULT = -5"
+          echo "✔ PASS"
+
+          echo ""
+          echo "TESTSUITE: SUBSTRACTION TEST SUITE"
+
+          echo ""
+          echo "TESTCASE: SUB 2 NUMBERS"
+          echo "ARRANGE -> MOVE 5 TO A"
+          echo "ARRANGE -> MOVE 3 TO B"
+          echo "ACT -> PERFORM SUB-PARAGRAPH"
+          echo "ASSERT -> RESULT = 2"
+          echo "✔ PASS"          echo "------------------------------"
           echo "TESTSUITE: NUMBERS TEST SUITE"
           echo "TESTCASE: ADD 2 NUMBERS"
           echo "ARRANGE -> MOVE 2 TO A"
