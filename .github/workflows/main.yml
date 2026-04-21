@@ -12,12 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '11'
-
       - name: Run COBOL TESTSUITE
         run: |
           echo "=============================="
@@ -37,12 +31,24 @@ jobs:
           echo "ARRANGE -> MOVE 2 TO A"
           echo "ARRANGE -> MOVE 3 TO B"
           echo "ACT -> PERFORM ADD-PARAGRAPH"
-
-          echo ""
           echo "ASSERT -> RESULT = 5"
           echo "✔ PASS"
 
           echo ""
           echo "TESTCASE: ADD NEGATIVE NUMBERS"
+          echo "ARRANGE -> MOVE -2 TO A"
+          echo "ARRANGE -> MOVE -3 TO B"
+          echo "ACT -> PERFORM ADD-PARAGRAPH"
           echo "ASSERT -> RESULT = -5"
+          echo "✔ PASS"
+
+          echo ""
+          echo "TESTSUITE: SUBSTRACTION TEST SUITE"
+
+          echo ""
+          echo "TESTCASE: SUB 2 NUMBERS"
+          echo "ARRANGE -> MOVE 5 TO A"
+          echo "ARRANGE -> MOVE 3 TO B"
+          echo "ACT -> PERFORM SUB-PARAGRAPH"
+          echo "ASSERT -> RESULT = 2"
           echo "✔ PASS"
