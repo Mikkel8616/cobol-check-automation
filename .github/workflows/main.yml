@@ -38,7 +38,7 @@ jobs:
           echo "ARRANGE -> MOVE 3 TO B"
           echo "ACT -> PERFORM ADD-PARAGRAPH"
 
-          # ❌ FAIL volontaire
+          echo ""
           echo "ASSERT -> RESULT = 5"
           echo "✔ PASS"
 
