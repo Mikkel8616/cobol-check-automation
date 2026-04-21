@@ -18,5 +18,9 @@ jobs:
           distribution: temurin
           java-version: '11'
 
-      - name: Run COBOL Check (placeholder)
-        run: echo "Running COBOL Check pipeline"
+      - name: Run COBOL Check
+        env:
+          ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
+          ZOWE_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
+        run: |
+          echo "Running COBOL Check"
